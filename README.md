@@ -5,4 +5,4 @@ Project will be about online game shop:
 - User can add the game to his cart
 - User can search games by name, genre, platform, developer, publisher, review score (some kind of filter)
 
-![db-rel](images/GameStore.png)
+![db-rel](Images/GameStore.png)

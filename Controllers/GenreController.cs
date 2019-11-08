@@ -25,6 +25,12 @@ namespace GameStore.Controllers
             return View(await _context.Genre.ToListAsync());
         }
 
+        [HttpPost]
+        public JsonResult validateGenreName(string name)
+        {
+            return Json(!_context.Genre.Any(genre => genre.name == name));
+        }
+
         // GET: Genre/Details/5
         public async Task<IActionResult> Details(int? id)
         {

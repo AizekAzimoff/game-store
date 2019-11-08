@@ -24,6 +24,12 @@ namespace GameStore.Controllers
         {
             return View(await _context.Platform.ToListAsync());
         }
+        
+        [HttpPost]
+        public JsonResult validatePlatformName(string name)
+        {
+            return Json(!_context.Platform.Any(platform => platform.name == name));
+        }
 
         // GET: Platform/Details/5
         public async Task<IActionResult> Details(int? id)

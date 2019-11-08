@@ -8,6 +8,7 @@ namespace GameStore.Models {
 
         public string text { get; set; }
 
+        [ScoreValidation]
         public int score { get; set; }
 
         public int gameId { get; set; }

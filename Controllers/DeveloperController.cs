@@ -25,6 +25,12 @@ namespace GameStore.Controllers
             return View(await _context.Developer.ToListAsync());
         }
 
+        [HttpPost]
+        public JsonResult validateDeveloperName(string name)
+        {
+            return Json(!_context.Developer.Any(developer => developer.name == name));
+        }
+
         // GET: Developer/Details/5
         public async Task<IActionResult> Details(int? id)
         {

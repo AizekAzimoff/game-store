@@ -25,6 +25,12 @@ namespace GameStore.Controllers
             return View(await _context.Publisher.ToListAsync());
         }
 
+        [HttpPost]
+        public JsonResult validatePublisherName(string name)
+        {
+            return Json(!_context.Publisher.Any(publisher => publisher.name == name));
+        }
+
         // GET: Publisher/Details/5
         public async Task<IActionResult> Details(int? id)
         {
