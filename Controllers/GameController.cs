@@ -49,8 +49,8 @@ namespace GameStore.Controllers
         // GET: Game/Create
         public IActionResult Create()
         {
-            ViewData["developerId"] = new SelectList(_context.Developer, "id", "id");
-            ViewData["publisherId"] = new SelectList(_context.Publisher, "id", "id");
+            ViewData["developerId"] = new SelectList(_context.Developer, "id", "name");
+            ViewData["publisherId"] = new SelectList(_context.Publisher, "id", "name");
             return View();
         }
 
